@@ -235,21 +235,3 @@ Este proyecto utiliza las siguientes tecnologías y herramientas:
     ```
 
     El frontend estará corriendo en `http://localhost:4200`.
-
----
-
-## 📝 Project Structure
-
-```bash
-├── backend/              # FastAPI Backend
-│   ├── app/              # FastAPI application
-│   ├── requirements.txt  # Backend dependencies
-│   ├── .env             # Environment variables (don't commit this file!)
-│   └── main.py          # FastAPI entry point
-├── frontend/             # Angular Frontend
-│   ├── src/              # Angular source code
-│   ├── package.json      # Frontend dependencies
-│   ├── angular.json      # Angular configuration
-│   └── src/environments  # Environment configuration files
-├── .gitignore            # Git ignore configuration
-└── README.md             # Project documentation
