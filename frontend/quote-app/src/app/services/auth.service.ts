@@ -4,12 +4,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, catchError, map, Observable, throwError } from 'rxjs';
 import { AppConstants } from '../constants/AppConstants';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  private API_URL = 'http://localhost:8000';
+  private API_URL = environment.apiUrl;
 
   private _username$ = new BehaviorSubject<string | null>(null);
 
