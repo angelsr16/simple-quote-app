@@ -1,0 +1,24 @@
+<p-dialog header="New Quote" [modal]="true" [visible]="true" [style]="{ width: '25rem' }"
+    (visibleChange)="onDismiss.emit()" (onHide)="onDismiss.emit()">
+
+    @if (quoteFormGroup) {
+    <form [formGroup]="quoteFormGroup">
+        <div class="mb-5">
+            <label><strong> Movie/TV Show Title: </strong></label>
+            <input class="w-full" pInputText type="text" formControlName="title">
+        </div>
+
+        <div class="mb-5">
+            <label><strong> Quote: </strong></label>
+            <input class="w-full" pInputText type="text" formControlName="content">
+        </div>
+
+        <div>
+            <button [disabled]="!this.quoteFormGroup.valid || this.isLoading" (click)="this.handleRegisterQuote()"
+                class="cursor-pointer bg-black text-white font-bold px-3 py-2 w-full rounded-xl disabled:bg-gray-300">
+                REGISTER
+            </button>
+        </div>
+    </form>
+    }
+</p-dialog>

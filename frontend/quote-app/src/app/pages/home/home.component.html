@@ -1,0 +1,18 @@
+<div class="relative">
+    <app-nav></app-nav>
+
+    <app-quotes (onAddQuoteClick)="this.displayQuoteDialog = true"
+        (onEditQuoteClick)="handleDisplayEditQuoteDialog($event)"></app-quotes>
+</div>
+@if (activateFloatingButton && (username$ | async)) {
+<p-button class="sticky bottom-10 left-10" icon="pi pi-plus" severity="info" [rounded]="true" />
+}
+
+@if (displayQuoteDialog) {
+<app-create-quote (onDismiss)="this.displayQuoteDialog = false"></app-create-quote>
+}
+
+@if(displayEditQuoteDialog && this.currentQuoteToEdit){
+<app-edit-quote (onDismiss)="this.displayEditQuoteDialog = false"
+    [currentQuote]="this.currentQuoteToEdit"></app-edit-quote>
+}

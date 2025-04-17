@@ -1,0 +1,40 @@
+<div class="flex justify-center items-center w-full h-screen">
+    @if (loginFormGroup) {
+    <form class="border border-gray-500 lg:w-[35%] w-full mx-10 shadow-2xl p-10 rounded-xl flex flex-col"
+        [formGroup]="loginFormGroup" (submit)="onSubmit()">
+
+        <h2 class="text-center font-bold text-2xl mb-10">ACCESO</h2>
+
+        <div class="flex flex-col mb-5">
+            <label><strong>Username: </strong></label>
+            <input class="w-full" type="text" pInputText formControlName="username" />
+        </div>
+
+        <div class="flex flex-col w-full mb-5">
+            <label><strong>Password: </strong></label>
+
+            <p-password styleClass="w-full" inputStyleClass="w-full" formControlName="password" toggleMask
+                [feedback]="false" />
+        </div>
+
+        <button [disabled]="!loginFormGroup.valid"
+            class="w-full bg-black text-white px-3 py-2 rounded-xl cursor-pointer mb-3 rounded-xl disabled:bg-gray-300"
+            [ngClass]="loginPanel ? 'bg-black' : 'bg-green-500'">
+            @if (loginPanel) {
+            Login
+            }@else {
+            Register
+            }
+        </button>
+
+        <div class="flex justify-end">
+            @if (loginPanel) {
+            <p (click)="loginPanel = false" class="underline cursor-pointer">Sign Up</p>
+            }@else {
+            <p (click)="loginPanel = true" class="underline cursor-pointer">Log In</p>
+            }
+        </div>
+    </form>
+    }
+
+</div>

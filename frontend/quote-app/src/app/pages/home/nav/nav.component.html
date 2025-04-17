@@ -1,0 +1,22 @@
+<nav class="bg-black text-white w-full h-12 px-20 py-5 flex justify-end items-center shadow-xl">
+    @if (username$ | async; as username) {
+    <span class="cursor-pointer" (click)="op.toggle($event)">{{ username }}</span>
+    }
+    @else {
+    <a routerLink="/login" class="cursor-pointer">
+        Log In
+        <i class="pi pi-sign-in"></i>
+    </a>
+    }
+</nav>
+
+<p-popover #op>
+    <div class="w-36 bg-white flex flex-col gap-3">
+        <hr class="text-gray-200">
+        <div (click)="onLogoutClick()"
+            class="flex gap-2 items-center cursor-pointer hover:bg-gray-200 px-4 py-2 rounded-xl">
+            <span>Logout</span>
+            <i class="pi pi-sign-out" style="font-size: 0.7rem"></i>
+        </div>
+    </div>
+</p-popover>

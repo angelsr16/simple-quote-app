@@ -1,0 +1,19 @@
+# Backend
+/backend/__pycache__/
+/backend/*.py[cod]
+/backend/.env
+/backend/venv/
+/backend/env/
+/backend/*.log
+
+# Frontend
+/frontend/dist/
+/frontend/node_modules/
+/frontend/out-tsc/
+/frontend/*.log
+
+# Global
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/

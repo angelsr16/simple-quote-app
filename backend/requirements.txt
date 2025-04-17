@@ -1,0 +1,6 @@
+bcrypt
+cryptography
+fastapi
+python-jose
+python-multipart
+passlib
