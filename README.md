@@ -4,7 +4,7 @@
 
 ### English Version:
 
-The **Quotes App** is a full-stack web application that allows users to register, log in, and interact with quotes. Users can create, edit, and delete quotes, and view global quotes from other users. Each quote is associated with a movie or TV show title, and contains the quote's content and a timestamp for when it was created.
+The **Quotes App** is a full-stack web application that allows users to register, log in, and interact with quotes. Users can create, edit, and delete quotes, and view global quotes from other users. Each quote is associated with a movie or TV show title.
 
 #### Key Features:
 - **User Authentication**: Users can register, log in, and log out.
@@ -17,7 +17,7 @@ The **Quotes App** is a full-stack web application that allows users to register
 
 ### Spanish Version:
 
-La **Aplicación de Citas** es una aplicación web completa que permite a los usuarios registrarse, iniciar sesión y gestionar citas. Los usuarios pueden crear, editar y eliminar citas, además de ver citas globales de otros usuarios. Cada cita está vinculada a un título de una película o serie de TV, y contiene el contenido de la cita y una marca de tiempo de cuando se creó.
+La **Quotes App** es una aplicación web que permite a los usuarios registrarse, iniciar sesión y gestionar citas. Los usuarios pueden crear, editar y eliminar, además de ver citas globales de otros usuarios. Cada cita está vinculada al título de una película o serie de TV correspondiente.
 
 #### Características Principales:
 - **Autenticación de Usuarios**: Los usuarios pueden registrarse, iniciar sesión y cerrar sesión.
@@ -45,9 +45,6 @@ This project uses the following technologies and tools:
 - **TypeScript**: A superset of JavaScript that provides better structure and maintainability.
 - **RxJS**: A reactive programming library used to handle asynchrony and events in Angular.
 
-#### Other:
-- **Docker** (optional): Used for containerizing the app, making it easier to deploy and scale.
-
 ---
 
 ### Spanish Version:
@@ -64,9 +61,6 @@ Este proyecto utiliza las siguientes tecnologías y herramientas:
 - **Angular**: Framework de frontend robusto y dinámico para crear aplicaciones web de una sola página (SPA) utilizando TypeScript.
 - **TypeScript**: Superset de JavaScript que permite un desarrollo más estructurado y fácil de mantener.
 - **RxJS**: Biblioteca para programación reactiva, utilizada para manejar la asincronía y eventos en Angular.
-
-#### Otros:
-- **Docker** (opcional): Usado para la contenerización de la aplicación, facilitando su despliegue y escalabilidad.
 
 ---
 
