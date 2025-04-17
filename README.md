@@ -1,10 +1,25 @@
 # Quotes App
 
-## 🚀 Resumen
+## 🚀 Overview
 
-La **Quotes App** es una aplicación web completa que permite a los usuarios registrarse, iniciar sesión y gestionar citas. Los usuarios pueden crear, editar y eliminar citas, además de ver citas globales de otros usuarios. Cada cita está vinculada a un título de una película o serie de TV, y contiene el contenido de la cita y una marca de tiempo de cuando se creó.
+### English Version:
 
-### Características Principales:
+The **Quotes App** is a full-stack web application that allows users to register, log in, and interact with quotes. Users can create, edit, and delete quotes, and view global quotes from other users. Each quote is associated with a movie or TV show title, and contains the quote's content and a timestamp for when it was created.
+
+#### Key Features:
+- **User Authentication**: Users can register, log in, and log out.
+- **Global Quotes**: View quotes created by all users.
+- **CRUD Operations**: Create, edit, and delete quotes.
+- **Movie/TV Show Titles**: Each quote is linked to a movie or TV show.
+- **Timestamps**: Each quote has a `created_at` field that tracks when it was created.
+
+---
+
+### Spanish Version:
+
+La **Aplicación de Citas** es una aplicación web completa que permite a los usuarios registrarse, iniciar sesión y gestionar citas. Los usuarios pueden crear, editar y eliminar citas, además de ver citas globales de otros usuarios. Cada cita está vinculada a un título de una película o serie de TV, y contiene el contenido de la cita y una marca de tiempo de cuando se creó.
+
+#### Características Principales:
 - **Autenticación de Usuarios**: Los usuarios pueden registrarse, iniciar sesión y cerrar sesión.
 - **Citas Globales**: Ver citas creadas por todos los usuarios.
 - **Operaciones CRUD**: Crear, editar y eliminar citas.
@@ -13,36 +28,146 @@ La **Quotes App** es una aplicación web completa que permite a los usuarios reg
 
 ---
 
-## ⚙️ Stack Tecnológico
+## ⚙️ Tech Stack
+
+### English Version:
+
+This project uses the following technologies and tools:
+
+#### Backend:
+- **FastAPI**: A modern, high-performance framework for building APIs with Python, built on top of `Starlette` for the web and `Pydantic` for data validation.
+- **MongoDB**: A NoSQL database for storing quotes and user data. MongoDB is highly scalable and flexible, making it ideal for handling JSON-like documents.
+- **Pydantic**: Used for data validation in FastAPI, ensuring that user inputs are valid and safe.
+- **JWT (JSON Web Tokens)**: A secure authentication system based on tokens for authenticating users.
+
+#### Frontend:
+- **Angular**: A robust, dynamic frontend framework for building single-page web applications (SPA) using TypeScript.
+- **TypeScript**: A superset of JavaScript that provides better structure and maintainability.
+- **RxJS**: A reactive programming library used to handle asynchrony and events in Angular.
+
+#### Other:
+- **Docker** (optional): Used for containerizing the app, making it easier to deploy and scale.
+
+---
+
+### Spanish Version:
 
 Este proyecto utiliza las siguientes tecnologías y herramientas:
 
-### Backend:
+#### Backend:
 - **FastAPI**: Un moderno framework de alto rendimiento para la creación de APIs en Python, basado en `Starlette` para la web y `Pydantic` para la validación de datos.
 - **MongoDB**: Base de datos NoSQL para almacenar las citas y los datos de usuario. MongoDB es altamente escalable y flexible, ideal para manejar documentos JSON como las citas.
 - **Pydantic**: Usado para la validación de datos en FastAPI, asegurando que las entradas de los usuarios sean válidas y seguras.
 - **JWT (JSON Web Tokens)**: Sistema de autenticación basado en tokens, utilizado para autenticar usuarios de manera segura.
-  
-### Frontend:
+
+#### Frontend:
 - **Angular**: Framework de frontend robusto y dinámico para crear aplicaciones web de una sola página (SPA) utilizando TypeScript.
 - **TypeScript**: Superset de JavaScript que permite un desarrollo más estructurado y fácil de mantener.
 - **RxJS**: Biblioteca para programación reactiva, utilizada para manejar la asincronía y eventos en Angular.
 
-### Otros:
+#### Otros:
 - **Docker** (opcional): Usado para la contenerización de la aplicación, facilitando su despliegue y escalabilidad.
 
 ---
 
-## 📥 Instrucciones de Configuración
+## 📥 Setup Instructions
 
-### Requisitos Previos:
+### English Version:
+
+#### Prerequisites:
+- **Python 3.7+** for the backend
+- **Node.js** and **npm** for the frontend
+- **MongoDB** (either a local instance or use MongoDB Atlas)
+
+---
+
+#### 1. Backend Setup (FastAPI + MongoDB)
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/quotes-app.git
+    cd quotes-app/backend
+    ```
+
+2. Create and activate a virtual environment:
+
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate   # For Linux/Mac
+    venv\Scripts\activate      # For Windows
+    ```
+
+3. Install the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Set up environment variables:
+    - Create a `.env` file in the `backend/` directory with the following content:
+
+    ```env
+    MONGO_URL=mongodb://localhost:27017
+    SECRET_KEY=your_secret_key_here
+    ```
+
+    - Replace `MONGO_URL` with your actual MongoDB connection string.
+
+5. Run the FastAPI application:
+
+    ```bash
+    uvicorn main:app --reload
+    ```
+
+    The backend will be running on `http://localhost:8000`.
+
+---
+
+#### 2. Frontend Setup (Angular)
+
+1. Navigate to the `frontend/` directory:
+
+    ```bash
+    cd frontend
+    ```
+
+2. Install the required dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Set up environment variables for the Angular app:
+    - Edit `src/environments/environment.ts` and set the API URL to your backend.
+
+    ```typescript
+    export const environment = {
+      production: false,
+      apiUrl: 'http://localhost:8000/api'  // Replace with your backend URL
+    };
+    ```
+
+4. Run the Angular development server:
+
+    ```bash
+    ng serve
+    ```
+
+    The frontend will be running on `http://localhost:4200`.
+
+---
+
+### Spanish Version:
+
+#### Requisitos Previos:
 - **Python 3.7+** para el backend
 - **Node.js** y **npm** para el frontend
 - **MongoDB** (puede ser una instancia local o usar MongoDB Atlas)
 
 ---
 
-### 1. Configuración del Backend (FastAPI + MongoDB)
+#### 1. Configuración del Backend (FastAPI + MongoDB)
 
 1. Clona el repositorio:
 
@@ -85,7 +210,7 @@ Este proyecto utiliza las siguientes tecnologías y herramientas:
 
 ---
 
-### 2. Configuración del Frontend (Angular)
+#### 2. Configuración del Frontend (Angular)
 
 1. Navega al directorio `frontend/`:
 
@@ -119,18 +244,18 @@ Este proyecto utiliza las siguientes tecnologías y herramientas:
 
 ---
 
-## 📝 Estructura del Proyecto
+## 📝 Project Structure
 
 ```bash
-├── backend/              # Backend con FastAPI
-│   ├── app/              # Aplicación FastAPI
-│   ├── requirements.txt  # Dependencias del backend
-│   ├── .env             # Variables de entorno (¡no lo subas a Git!)
-│   └── main.py          # Punto de entrada de FastAPI
-├── frontend/             # Frontend con Angular
-│   ├── src/              # Código fuente de Angular
-│   ├── package.json      # Dependencias del frontend
-│   ├── angular.json      # Configuración de Angular
-│   └── src/environments  # Archivos de configuración del entorno
-├── .gitignore            # Configuración de archivos ignorados por Git
-└── README.md             # Documentación del proyecto
+├── backend/              # FastAPI Backend
+│   ├── app/              # FastAPI application
+│   ├── requirements.txt  # Backend dependencies
+│   ├── .env             # Environment variables (don't commit this file!)
+│   └── main.py          # FastAPI entry point
+├── frontend/             # Angular Frontend
+│   ├── src/              # Angular source code
+│   ├── package.json      # Frontend dependencies
+│   ├── angular.json      # Angular configuration
+│   └── src/environments  # Environment configuration files
+├── .gitignore            # Git ignore configuration
+└── README.md             # Project documentation
